@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.py",  
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",  
+        "dest": "/app.py"    
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/app.py"    
+      }
+    ],
+    "env": {
+      "MONGO_URI": "mongodb+srv://satya:satya@cluster0.8thgg4a.mongodb.net/employee_management?retryWrites=true&w=majority",
+      "SECRET_KEY": "df78gs9hwv893hcwhc9h3c98hwc329hw30h40"
+    }
+  }
