@@ -10,7 +10,7 @@ from flask_cors import CORS  # Import CORS
 app = Flask(__name__)
 
 # Enable CORS for all routes and origins (allowing React frontend on localhost:3000)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/*": {"origins": "https://team-track-ui.vercel.app/"}})
 
 # MongoDB URI
 app.config["MONGO_URI"] = "mongodb+srv://satya:satya@cluster0.8thgg4a.mongodb.net/employee_management?retryWrites=true&w=majority"
